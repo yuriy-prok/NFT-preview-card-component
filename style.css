@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 97vh;
+  margin: 0 auto;
+  max-width: 375px;
+  width: 100%;
+}
+
+.section-card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  gap: 22px;
+}
+
+.img-container {
+  position: relative;
+  max-height: 340px;
+}
+
+.img-container img {
+  border-radius: 15px;
+  max-width: 340px;
+}
+
+.img-container .overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  border-radius: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.img-container .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .view {
+  opacity: 1;
+}
+
+.section-card h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  font-size: 22.4px;
+}
+
+.section-card h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-card p {
+  color: hsl(215, 51%, 70%);
+  font-size: 17.6px;
+  letter-spacing: 1.2px;
+}
+
+.crypto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crypto h3 {
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+  font-size: 22.4px;
+}
+
+.crypto h3::before {
+  content: url('./images/icon-ethereum.svg');
+  margin-right: 10px;
+}
+
+.crypto p {
+  color: hsl(215, 51%, 70%);
+  font-size: 17.6px;
+}
+
+.crypto p::before {
+  content: url('./images/icon-clock.svg');
+  margin-right: 10px;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding-top: 20px;
+}
+
+.author-container img {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  max-width: 32px;
+  margin-right: 16px;
+}
+
+.author-container p {
+  color: hsl(215, 51%, 70%);
+  font-size: 17.6px;
+}
+
+.author-container p::before {
+  content: url('./images/icon-calendar.svg');
+  margin-right: 10px;
+}
+
+.author-container p span {
+  color: hsl(0, 0%, 100%);
+}
+
+.author-container p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(178, 100%, 50%);
+}
